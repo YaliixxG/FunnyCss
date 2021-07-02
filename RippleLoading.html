@@ -12,7 +12,7 @@
                 height: 320px;
                 border-radius: 50%;
             }
-            .bg {
+            .yxbg {
                 position: absolute;
                 width: 315px;
                 height: 315px;
@@ -145,8 +145,17 @@
         </style>
     </head>
     <body>
+        <!-- 外圈的线实现思路： 
+        1. 底部是一个完整圆形 yxbg，有 border 即出现的线
+        2. 然后由两个半圆sx1，sx2，进行旋转，尺寸稍大于 yxbg，这样就可以展示出线的运动  
+        3. 再用一个半圆sx1-2 尺寸与 yxbg 相同，解决 sx1运动过后，border 消失的问题
+
+        水波纹的实现思路  
+        1. 利用圆角，并且转动 div 来实现波浪的涌动效果  
+        2. 两层则具有更明显的涌动   -->
+
         <div class="wave-wrap">
-            <div class="bg"></div>
+            <div class="yxbg"></div>
             <div class="sx1"></div>
             <div class="sx2"></div>
             <div class="sx1-2"></div>
